@@ -1,10 +1,13 @@
 import React from "react";
 import { StyleSheet, Text, View, TouchableOpacity } from "react-native";
 import MenuItemWrapper from "./MenuItemWrapper";
-const MeuItemButton = ({ title }) => {
+const MeuItemButton = ({ screen, title, icon, navigation }) => {
   return (
-    <TouchableOpacity style={styles.item}>
-      <MenuItemWrapper title={title} />
+    <TouchableOpacity
+      onPress={() => navigation.navigate(screen)}
+      style={styles.item}
+    >
+      <MenuItemWrapper icon={icon} title={title} />
     </TouchableOpacity>
   );
 };

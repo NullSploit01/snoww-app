@@ -1,22 +1,52 @@
-import { View, StyleSheet, Text, TouchableOpacity } from "react-native";
+import { View, StyleSheet } from "react-native";
 import MeuItemButton from "../components/MenuItemButton";
-const HomeScreen = () => {
+const HomeScreen = ({ navigation }) => {
   return (
     <View style={styles.home}>
       <View style={styles.row}>
-        <MeuItemButton title="Calender" />
+        <MeuItemButton
+          screen="Calendar"
+          title="Calendar"
+          navigation={navigation}
+          icon="calendar"
+        />
         <View style={{ flex: 0.1 }} />
-        <MeuItemButton title="Gallery" />
+        <MeuItemButton
+          screen="Gallery"
+          navigation={navigation}
+          title="Gallery"
+          icon="photo-video"
+        />
       </View>
       <View style={styles.row}>
-        <MeuItemButton title="Chat" />
+        <MeuItemButton
+          navigation={navigation}
+          screen="Chat"
+          title="Chat"
+          icon="rocketchat"
+        />
         <View style={{ flex: 0.1 }} />
-        <MeuItemButton title="Activities" />
+        <MeuItemButton
+          navigation={navigation}
+          screen="Activities"
+          title="Activities"
+          icon="tasks"
+        />
       </View>
       <View style={styles.row}>
-        <MeuItemButton title="Personal Notes" />
+        <MeuItemButton
+          screen="Notes"
+          navigation={navigation}
+          title="Personal Notes"
+          icon="sticky-note"
+        />
         <View style={{ flex: 0.1 }} />
-        <MeuItemButton title="Profile" />
+        <MeuItemButton
+          screen="Profile"
+          navigation={navigation}
+          title="Profile"
+          icon="address-book"
+        />
       </View>
     </View>
   );
