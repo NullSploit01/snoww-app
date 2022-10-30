@@ -18,7 +18,6 @@ export default function App() {
       <Stack.Navigator>
         <Stack.Screen
           name="Home"
-          options={{ headerShown: false }}
           component={HomeScreen}
         />
         <Stack.Screen
@@ -29,32 +28,26 @@ export default function App() {
         <Stack.Screen
           name="Activities"
           component={ActivitiesScreen}
-          options={{ headerShown: false }}
         />
         <Stack.Screen
           name="Gallery"
           component={GalleryScreen}
-          options={{ headerShown: false }}
         />
         <Stack.Screen
           name="Chat"
           component={ChatScreen}
-          options={{ headerShown: false }}
         />
         <Stack.Screen
           name="Notes"
           component={NotesScreen}
-          options={{ headerShown: false }}
         />
         <Stack.Screen
           name="Profile"
           component={ProfileScreen}
-          options={{ headerShown: false }}
         />
         <Stack.Screen
           name="Calendar"
           component={CalendarScreen}
-          options={{ headerShown: false }}
         />
       </Stack.Navigator>
     </NavigationContainer>
